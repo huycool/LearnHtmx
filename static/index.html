@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
+    />
+    <script
+      src="https://unpkg.com/htmx.org@1.7.0"
+      integrity="sha384-EzBXYPt0/T6gxNp0nuPtLkmRpmDBbjg6WmCUZRLXBBwYYmwAUxzlSGej0ARHX0Bo"
+      crossorigin="anonymous"
+    ></script>
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <main class="container">
+        <form>
+            <input type="text" name="name"></input>
+            <button type="button" hx-post="/api/hello" hx-target="#result">
+              Say hello
+            </button>
+          </form>
+          <div id="result"></div>
+    </main>
+  </body>
+</html>
